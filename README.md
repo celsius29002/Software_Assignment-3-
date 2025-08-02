@@ -46,35 +46,6 @@ A modern, responsive educational website designed specifically for rural student
 - Web server (Apache/Nginx)
 - Modern web browser
 
-### Step 1: Database Setup
-1. Create a MySQL database
-2. Import the database schema:
-   ```bash
-   mysql -u your_username -p your_database < database_setup.sql
-   ```
-
-### Step 2: Configuration
-1. Edit `config.php` with your database credentials:
-   ```php
-   $host = 'localhost';
-   $dbname = 'educonnect_db';
-   $username = 'your_db_username';
-   $password_db = 'your_db_password';
-   ```
-
-2. Update the site URL in `config.php`:
-   ```php
-   define('SITE_URL', 'http://your-domain.com/educonnect');
-   ```
-
-### Step 3: File Permissions
-Ensure your web server has read/write permissions for the application directory.
-
-### Step 4: Web Server Configuration
-1. Place all files in your web server's document root
-2. Ensure PHP is enabled and configured
-3. Configure your web server to handle PHP files
-
 ## 👥 Default Users
 
 The system comes with three default users for testing:
@@ -168,35 +139,6 @@ The application is fully responsive and optimized for:
 - Safari 14+
 - Edge 90+
 
-## 📊 NESA Subject Integration
-
-The platform is specifically designed for NSW HSC students with:
-
-### English Standard
-- Module-based learning structure
-- Text analysis and essay writing
-- NESA syllabus alignment
-
-### Mathematics Standard 2
-- Real-world applications focus
-- Financial mathematics
-- Statistics and networks
-
-### Design and Technology
-- Project-based learning
-- Design thinking methodology
-- Major project support
-
-### Software Engineering
-- Programming fundamentals
-- Project development lifecycle
-- Extended project work
-
-### PDHPE
-- Health priorities
-- Movement skills
-- Critical thinking development
-
 ## 🚀 Performance Optimizations
 
 - **CSS Optimization**: Minified and optimized stylesheets
@@ -205,7 +147,7 @@ The platform is specifically designed for NSW HSC students with:
 - **Database Indexing**: Optimized database queries
 - **Lazy Loading**: Progressive content loading
 
-## 🔧 Customization
+## 🔧 Customisation
 
 ### Adding New Subjects
 1. Update the lessons grid in `lessons.html`
@@ -276,7 +218,4 @@ For support or questions:
 - Mobile app development
 - Integration with learning management systems
 
----
 
-
-**Built with ❤️ for rural education** 
