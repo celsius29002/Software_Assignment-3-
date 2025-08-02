@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Progress - RuralEdu</title>
+    <link rel="stylesheet" href="styles.css?v=2.3" />
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#5a67d8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="EduConnect" />
+    <meta name="application-name" content="EduConnect" />
+    <meta name="description" content="Offline-capable educational platform for rural students" />
+  </head>
+  <body>
+    <!-- Header Navigation -->
+    <header class="header">
+      <div class="container">
+        <div class="nav-brand">
+          <h1>📚 RuralEdu</h1>
+          <span class="tagline">Learning Without Limits</span>
+        </div>
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="index.html" class="nav-link">Dashboard</a></li>
+            <li><a href="lessons.html" class="nav-link">Lessons</a></li>
+            <li><a href="assignments.html" class="nav-link">Assignments</a></li>
+            <li><a href="progress.html" class="nav-link active">Progress</a></li>
+            <li><a href="profile.html" class="nav-link">Profile</a></li>
+          </ul>
+        </nav>
+        <div class="offline-indicator">
+          <span id="connection-status" class="online" style="cursor: pointer;">🟢 Online</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <section class="section active">
+        <div class="container">
+          <div class="page-header">
+            <h2>📊 Your Learning Progress</h2>
+            <p>Track your achievements and see how far you've come</p>
+          </div>
+
+          <div class="progress-overview">
+            <div class="progress-card">
+              <h3>Overall Progress</h3>
+              <div class="circular-progress">
+                <div class="progress-circle" data-progress="85">
+                  <span class="progress-text">85%</span>
+                </div>
+              </div>
+              <p>Great job! You're making excellent progress.</p>
+              <div class="progress-details">
+                <div class="detail-item">
+                  <span class="detail-label">Study Streak</span>
+                  <span class="detail-value">7 days</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">Total Study Time</span>
+                  <span class="detail-value">24h 15m</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="subject-progress">
+              <h3>Subject-wise Progress</h3>
+              <div class="subject-item">
+                <span class="subject-name">📖 English Standard</span>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 85%"></div>
+                </div>
+                <span class="progress-percent">85%</span>
+              </div>
+              <div class="subject-item">
+                <span class="subject-name">➗ Mathematics Standard 2</span>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 78%"></div>
+                </div>
+                <span class="progress-percent">78%</span>
+              </div>
+              <div class="subject-item">
+                <span class="subject-name">🔧 Design and Technology</span>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 72%"></div>
+                </div>
+                <span class="progress-percent">72%</span>
+              </div>
+              <div class="subject-item">
+                <span class="subject-name">💻 Software Engineering</span>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 82%"></div>
+                </div>
+                <span class="progress-percent">82%</span>
+              </div>
+              <div class="subject-item">
+                <span class="subject-name">🏃 PDHPE</span>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 80%"></div>
+                </div>
+                <span class="progress-percent">80%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Weekly Progress Chart -->
+          <div class="weekly-progress">
+            <h3>📈 Weekly Activity</h3>
+            <div class="chart-container">
+              <div class="chart-bars">
+                <div class="chart-bar" style="height: 60%">
+                  <span class="bar-value">3h</span>
+                  <span class="bar-label">Mon</span>
+                </div>
+                <div class="chart-bar" style="height: 80%">
+                  <span class="bar-value">4h</span>
+                  <span class="bar-label">Tue</span>
+                </div>
+                <div class="chart-bar" style="height: 40%">
+                  <span class="bar-value">2h</span>
+                  <span class="bar-label">Wed</span>
+                </div>
+                <div class="chart-bar" style="height: 90%">
+                  <span class="bar-value">4.5h</span>
+                  <span class="bar-label">Thu</span>
+                </div>
+                <div class="chart-bar" style="height: 70%">
+                  <span class="bar-value">3.5h</span>
+                  <span class="bar-label">Fri</span>
+                </div>
+                <div class="chart-bar" style="height: 50%">
+                  <span class="bar-value">2.5h</span>
+                  <span class="bar-label">Sat</span>
+                </div>
+                <div class="chart-bar" style="height: 85%">
+                  <span class="bar-value">4.2h</span>
+                  <span class="bar-label">Sun</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Performance Stats -->
+          <div class="performance-stats">
+            <h3>📋 Performance Overview</h3>
+            <div class="stats-grid">
+              <div class="stat-card">
+                <div class="stat-icon">📚</div>
+                <div class="stat-info">
+                  <span class="stat-number">45</span>
+                  <span class="stat-label">Lessons Completed</span>
+                </div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-icon">📝</div>
+                <div class="stat-info">
+                  <span class="stat-number">32</span>
+                  <span class="stat-label">Assignments Submitted</span>
+                </div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-icon">🎯</div>
+                <div class="stat-info">
+                  <span class="stat-number">87%</span>
+                  <span class="stat-label">Average Score</span>
+                </div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-icon">🔥</div>
+                <div class="stat-info">
+                  <span class="stat-number">15</span>
+                  <span class="stat-label">Days Active</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="achievements">
+            <h3>🏆 Achievements & Badges</h3>
+            <div class="achievement-grid">
+              <div class="achievement-badge earned">
+                <div class="badge-icon">🎯</div>
+                <h4>First Quiz Completed</h4>
+                <p>Completed your first quiz successfully</p>
+                <span class="earned-date">Earned 2 weeks ago</span>
+              </div>
+              <div class="achievement-badge earned">
+                <div class="badge-icon">📚</div>
+                <h4>Lesson Streak</h4>
+                <p>Completed lessons for 7 days straight</p>
+                <span class="earned-date">Earned 3 days ago</span>
+              </div>
+              <div class="achievement-badge earned">
+                <div class="badge-icon">⭐</div>
+                <h4>Honor Student</h4>
+                <p>Maintained A grade average for a month</p>
+                <span class="earned-date">Earned 1 week ago</span>
+              </div>
+              <div class="achievement-badge">
+                <div class="badge-icon">🏆</div>
+                <h4>Top Performer</h4>
+                <p>Score 95% or higher on 5 assignments</p>
+                <span class="progress-text">Progress: 3/5</span>
+              </div>
+              <div class="achievement-badge">
+                <div class="badge-icon">🔥</div>
+                <h4>30-Day Streak</h4>
+                <p>Study consistently for 30 days</p>
+                <span class="progress-text">Progress: 15/30</span>
+              </div>
+              <div class="achievement-badge">
+                <div class="badge-icon">🎓</div>
+                <h4>Subject Master</h4>
+                <p>Complete all lessons in any subject</p>
+                <span class="progress-text">English: 90%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recent Activity -->
+          <div class="recent-activity">
+            <h3>🕒 Recent Activity</h3>
+            <div class="activity-list">
+              <div class="activity-item">
+                <div class="activity-icon">📝</div>
+                <div class="activity-content">
+                  <h4>Completed English Standard Essay</h4>
+                  <p>Texts and Human Experiences analytical essay submitted</p>
+                  <span class="activity-time">2 hours ago</span>
+                </div>
+                <div class="activity-score">+85 pts</div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-icon">📚</div>
+                <div class="activity-content">
+                  <h4>Finished Mathematics Standard 2 Module</h4>
+                  <p>Financial Mathematics lesson completed</p>
+                  <span class="activity-time">1 day ago</span>
+                </div>
+                <div class="activity-score">+78 pts</div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-icon">🔧</div>
+                <div class="activity-content">
+                  <h4>Design and Technology Project</h4>
+                  <p>Major Design Project folio updated</p>
+                  <span class="activity-time">2 days ago</span>
+                </div>
+                <div class="activity-score">+72 pts</div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-icon">💻</div>
+                <div class="activity-content">
+                  <h4>Software Engineering Development</h4>
+                  <p>Major project coding session completed</p>
+                  <span class="activity-time">3 days ago</span>
+                </div>
+                <div class="activity-score">+82 pts</div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-icon">🏃</div>
+                <div class="activity-content">
+                  <h4>PDHPE Health Research</h4>
+                  <p>Health priorities research task submitted</p>
+                  <span class="activity-time">4 days ago</span>
+                </div>
+                <div class="activity-score">+80 pts</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 RuralEdu - Empowering Rural Education</p>
+        <div class="footer-links">
+          <a href="#help">Help</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

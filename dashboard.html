@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - RuralEdu</title>
+    <link rel="stylesheet" href="styles.css?v=2.4" />
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#5a67d8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="RuralEdu" />
+    <meta name="application-name" content="RuralEdu" />
+    <meta name="description" content="Offline-capable educational platform for rural students" />
+  </head>
+  <body>
+    <!-- Header Navigation -->
+    <header class="header">
+      <div class="container">
+        <div class="nav-brand">
+          <h1>📚 RuralEdu</h1>
+          <span class="tagline">Learning Without Limits</span>
+        </div>
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="dashboard.html" class="nav-link active">Dashboard</a></li>
+            <li><a href="lessons.html" class="nav-link">Lessons</a></li>
+            <li><a href="assignments.html" class="nav-link">Assignments</a></li>
+            <li><a href="progress.html" class="nav-link">Progress</a></li>
+            <li><a href="profile.html" class="nav-link">Profile</a></li>
+          </ul>
+        </nav>
+        <div class="offline-indicator">
+          <span id="connection-status" class="online" style="cursor: pointer;">🟢 Online</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <section class="section active">
+        <div class="container">
+          <div class="welcome-section">
+            <h2>Welcome back, Xavier!</h2>
+            <p>Continue your learning journey</p>
+          </div>
+          
+          <div class="dashboard-grid">
+            <!-- Quick Stats -->
+            <div class="stats-card">
+              <h3>📊 Your Progress</h3>
+              <div class="stat-item">
+                <span class="stat-number">12</span>
+                <span class="stat-label">Lessons Completed</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">5</span>
+                <span class="stat-label">Assignments Due</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">85%</span>
+                <span class="stat-label">Overall Progress</span>
+              </div>
+            </div>
+
+            <!-- Recent Lessons -->
+            <div class="recent-lessons">
+              <h3>📖 Continue Learning</h3>
+              <div class="lesson-list">
+                <div class="lesson-item">
+                  <div class="lesson-info">
+                    <h4>📖 English Standard</h4>
+                    <p>Module: Texts and Human Experiences</p>
+                    <div class="progress-bar">
+                      <div class="progress-fill" style="width: 45%"></div>
+                    </div>
+                  </div>
+                  <a href="lessons.html" class="btn-continue">Continue</a>
+                </div>
+                <div class="lesson-item">
+                  <div class="lesson-info">
+                    <h4>➗ Mathematics Standard 2</h4>
+                    <p>Topic: Financial Mathematics</p>
+                    <div class="progress-bar">
+                      <div class="progress-fill" style="width: 30%"></div>
+                    </div>
+                  </div>
+                  <a href="lessons.html" class="btn-continue">Continue</a>
+                </div>
+                <div class="lesson-item">
+                  <div class="lesson-info">
+                    <h4>🛠️ Design and Technology</h4>
+                    <p>Project: Major Design Project</p>
+                    <div class="progress-bar">
+                      <div class="progress-fill" style="width: 60%"></div>
+                    </div>
+                  </div>
+                  <a href="lessons.html" class="btn-continue">Continue</a>
+                </div>
+                <div class="lesson-item">
+                  <div class="lesson-info">
+                    <h4>💻 Software Engineering</h4>
+                    <p>Module: Secure Software Architecture</p>
+                    <div class="progress-bar">
+                      <div class="progress-fill" style="width: 20%"></div>
+                    </div>
+                  </div>
+                  <a href="lessons.html" class="btn-continue">Continue</a>
+                </div>
+                <div class="lesson-item">
+                  <div class="lesson-info">
+                    <h4>🏃‍♂️ PDHPE</h4>
+                    <p>Core: Health Priorities in Australia</p>
+                    <div class="progress-bar">
+                      <div class="progress-fill" style="width: 10%"></div>
+                    </div>
+                  </div>
+                  <a href="lessons.html" class="btn-continue">Continue</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Upcoming Assignments -->
+            <div class="assignments-preview">
+              <h3>📝 Upcoming Assignments</h3>
+              <div class="assignment-list">
+                <div class="assignment-item urgent">
+                  <h4>English Standard Trial</h4>
+                  <p>Due: 5 Days</p>
+                  <span class="due-badge urgent">Urgent</span>
+                </div>
+                <div class="assignment-item">
+                  <h4>Mathematics Standard 2 Trial</h4>
+                  <p>Due: 12 Days</p>
+                  <span class="due-badge">Pending</span>
+                </div>
+                <div class="assignment-item">
+                  <h4>Design and Technology Project</h4>
+                  <p>Due: 29 Days</p>
+                  <span class="due-badge">Upcoming</span>
+                </div>
+                <div class="assignment-item">
+                  <h4>Software Engineering Project</h4>
+                  <p>Due: 3 Days</p>
+                  <span class="due-badge">Upcoming</span>
+                </div>
+                <div class="assignment-item">
+                  <h4>PDHPE Trial</h4>
+                  <p>Due: 9 Days</p>
+                  <span class="due-badge">Upcoming</span>
+                </div>
+              </div>
+              <div class="view-all-btn">
+                <a href="assignments.html" class="btn-primary">View All Assignments</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Action Cards -->
+          <div class="quick-actions">
+            <h3>🚀 Quick Actions</h3>
+            <div class="action-grid">
+              <a href="lessons.html" class="action-card">
+                <div class="action-icon">📚</div>
+                <h4>Browse Lessons</h4>
+                <p>Explore available courses and start learning</p>
+              </a>
+              <a href="assignments.html" class="action-card">
+                <div class="action-icon">📝</div>
+                <h4>Complete Assignments</h4>
+                <p>Work on pending assignments and quizzes</p>
+              </a>
+              <a href="progress.html" class="action-card">
+                <div class="action-icon">📊</div>
+                <h4>View Progress</h4>
+                <p>Track your learning progress and achievements</p>
+              </a>
+              <a href="profile.html" class="action-card">
+                <div class="action-icon">👤</div>
+                <h4>Update Profile</h4>
+                <p>Manage your account and preferences</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 RuralEdu - Empowering Rural Education</p>
+        <div class="footer-links">
+          <a href="#help">Help</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html> 

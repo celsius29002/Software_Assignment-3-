@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lessons - RuralEdu</title>
+    <link rel="stylesheet" href="styles.css?v=2.3" />
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#5a67d8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="EduConnect" />
+    <meta name="application-name" content="EduConnect" />
+    <meta name="description" content="Offline-capable educational platform for rural students" />
+  </head>
+  <body>
+    <!-- Header Navigation -->
+    <header class="header">
+      <div class="container">
+        <div class="nav-brand">
+          <h1>📚 RuralEdu</h1>
+          <span class="tagline">Learning Without Limits</span>
+        </div>
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="index.html" class="nav-link">Dashboard</a></li>
+            <li><a href="lessons.html" class="nav-link active">Lessons</a></li>
+            <li><a href="assignments.html" class="nav-link">Assignments</a></li>
+            <li><a href="progress.html" class="nav-link">Progress</a></li>
+            <li><a href="profile.html" class="nav-link">Profile</a></li>
+          </ul>
+        </nav>
+        <div class="offline-indicator">
+          <span id="connection-status" class="online" style="cursor: pointer;">🟢 Online</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <section class="section active">
+        <div class="container">
+          <div class="page-header">
+            <h2>📚 Available Lessons</h2>
+            <p>Explore courses designed for your learning journey</p>
+          </div>
+
+          <!-- Enhanced Search and Filter Section -->
+          <div class="search-filter-container">
+          <div class="search-filter">
+              <div class="search-box">
+                <input type="text" placeholder="🔍 Search lessons..." class="search-input" id="lessonSearch">
+              </div>
+              <div class="filter-controls">
+            <select class="filter-select" id="subjectFilter">
+                  <option value="">📚 All Subjects</option>
+                  <option value="english-standard">📖 English Standard</option>
+                  <option value="maths-standard-2">➗ Mathematics Standard 2</option>
+                  <option value="design-tech">🛠️ Design and Technology</option>
+                  <option value="software-eng">💻 Software Engineering</option>
+                  <option value="pdhpe">🏃‍♂️ PDHPE</option>
+            </select>
+            <select class="filter-select" id="levelFilter">
+                  <option value="">📊 All Levels</option>
+                  <option value="beginner">🟢 Beginner</option>
+                  <option value="intermediate">🟡 Intermediate</option>
+                  <option value="advanced">🔴 Advanced</option>
+            </select>
+              </div>
+            </div>
+            <div class="filter-summary">
+              <span class="active-filters">Showing all lessons</span>
+              <button class="btn-secondary clear-filters" id="clearFilters">Clear Filters</button>
+            </div>
+          </div>
+          
+          <!-- Enhanced Lessons Grid -->
+          <div class="lessons-grid" id="lessonsGrid">
+            <div class="lesson-card" data-subject="english-standard" data-level="senior">
+              <div class="lesson-header">
+                <div class="lesson-title">
+                  <h3>📖 English Standard</h3>
+                  <p class="lesson-subtitle">Language, Literature & Communication</p>
+                </div>
+                <span class="difficulty intermediate">Stage 6</span>
+              </div>
+              <div class="lesson-content">
+                <p class="lesson-description">Develops students' language, literacy, and literature skills through a wide variety of texts. Focuses on responding to and composing oral, written, and multimodal texts, and builds skills in analysis, interpretation, and communication. Students become confident, effective communicators and critical thinkers.</p>
+                <a href="https://educationstandards.nsw.edu.au/wps/portal/nesa/11-12/stage-6-learning-areas/stage-6-english/english-standard-2017" target="_blank" class="syllabus-link">📋 View NESA Syllabus</a>
+              </div>
+              <div class="lesson-stats">
+                <div class="stat-item">
+                  <span class="stat-icon">📖</span>
+                  <span class="stat-text">4 Modules</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-icon">⏱️</span>
+                  <span class="stat-text">2 Years</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-icon">👥</span>
+                  <span class="stat-text">1,200 students</span>
+                </div>
+              </div>
+              <div class="lesson-progress">
+                <div class="progress-info">
+                  <span class="progress-label">Your Progress</span>
+                  <span class="progress-percentage">0%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 0%"></div>
+                </div>
+                <span class="progress-status">Not Started</span>
+              </div>
+              <div class="lesson-actions">
+                <button class="btn-primary">🚀 Start Learning</button>
+                <button class="btn-secondary">📋 View Details</button>
+              </div>
+            </div>
+            
+            <div class="lesson-card" data-subject="maths-standard-2" data-level="senior">
+              <div class="lesson-header">
+                <div class="lesson-title">
+                  <h3>➗ Mathematics Standard 2</h3>
+                  <p class="lesson-subtitle">Real-World Applications</p>
+                </div>
+                <span class="difficulty intermediate">Stage 6</span>
+              </div>
+              <div class="lesson-content">
+                <p class="lesson-description">Focuses on using mathematics to make informed decisions in daily life and real-world applications. Covers algebra, measurement, financial mathematics, statistics, and networks. Prepares students for a wide range of educational and employment aspirations, including tertiary study.</p>
+                <a href="https://educationstandards.nsw.edu.au/wps/portal/nesa/11-12/stage-6-learning-areas/stage-6-mathematics/mathematics-standard-2017" target="_blank" class="syllabus-link">📋 View NESA Syllabus</a>
+              </div>
+              <div class="lesson-stats">
+                <div class="stat-item">
+                  <span class="stat-icon">📖</span>
+                  <span class="stat-text">5 Topics</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-icon">⏱️</span>
+                  <span class="stat-text">2 Years</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-icon">👥</span>
+                  <span class="stat-text">1,100 students</span>
+                </div>
+              </div>
+              <div class="lesson-progress">
+                <div class="progress-info">
+                  <span class="progress-label">Your Progress</span>
+                  <span class="progress-percentage">0%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 0%"></div>
+                </div>
+                <span class="progress-status">Not Started</span>
+              </div>
+              <div class="lesson-actions">
+                <button class="btn-primary">🚀 Start Learning</button>
+                <button class="btn-secondary">📋 View Details</button>
+              </div>
+            </div>
+            
+            <div class="lesson-card" data-subject="design-tech" data-level="senior">
+              <div class="lesson-header">
+                <div class="lesson-title">
+                  <h3>🛠️ Design and Technology</h3>
+                  <p class="lesson-subtitle">Innovation & Problem Solving</p>
+                </div>
+                <span class="difficulty intermediate">Stage 6</span>
+              </div>
+              <div class="lesson-content">
+                <p class="lesson-description">Explores designing and producing through hands-on, practical activities. Students learn design theory, processes, environmental and social issues, and develop a major design project. Emphasizes creativity, innovation, and real-world problem solving.</p>
+                <a href="https://educationstandards.nsw.edu.au/wps/portal/nesa/11-12/stage-6-learning-areas/tas/design-and-technology-syllabus" target="_blank" class="syllabus-link">📋 View NESA Syllabus</a>
+              </div>
+              <div class="lesson-stats">
+                <div class="stat-item">
+                  <span class="stat-icon">📖</span>
+                  <span class="stat-text">2 Major Projects</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-icon">⏱️</span>
+                  <span class="stat-text">2 Years</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-icon">👥</span>
+                  <span class="stat-text">800 students</span>
+                </div>
+              </div>
+              <div class="lesson-progress">
+                <div class="progress-info">
+                  <span class="progress-label">Your Progress</span>
+                  <span class="progress-percentage">0%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 0%"></div>
+                </div>
+                <span class="progress-status">Not Started</span>
+              </div>
+              <div class="lesson-actions">
+                <button class="btn-primary">🚀 Start Learning</button>
+                <button class="btn-secondary">📋 View Details</button>
+              </div>
+            </div>
+
+            <div class="lesson-card" data-subject="software-eng" data-level="senior">
+              <div class="lesson-header">
+                <div class="lesson-title">
+                  <h3>💻 Software Engineering</h3>
+                  <p class="lesson-subtitle">Programming & Development</p>
+                </div>
+                <span class="difficulty advanced">Stage 6</span>
+              </div>
+              <div class="lesson-content">
+                <p class="lesson-description">Focuses on the principles and practices of software development, including programming fundamentals, object-oriented design, web programming, automation, and secure software architecture. Students complete a major software engineering project.</p>
+                <a href="https://curriculum.nsw.edu.au/learning-areas/tas/software-engineering-11-12-2022/overview" target="_blank" class="syllabus-link">📋 View NESA Syllabus</a>
+              </div>
+              <div class="lesson-stats">
+                <div class="stat-item">
+                  <span class="stat-icon">📖</span>
+                  <span class="stat-text">7 Modules</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-icon">⏱️</span>
+                  <span class="stat-text">2 Years</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-icon">👥</span>
+                  <span class="stat-text">600 students</span>
+                </div>
+              </div>
+              <div class="lesson-progress">
+                <div class="progress-info">
+                  <span class="progress-label">Your Progress</span>
+                  <span class="progress-percentage">0%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 0%"></div>
+                </div>
+                <span class="progress-status">Not Started</span>
+              </div>
+              <div class="lesson-actions">
+                <button class="btn-primary">🚀 Start Learning</button>
+                <button class="btn-secondary">📋 View Details</button>
+              </div>
+            </div>
+
+            <div class="lesson-card" data-subject="pdhpe" data-level="senior">
+              <div class="lesson-header">
+                <div class="lesson-title">
+                  <h3>🏃‍♂️ PDHPE</h3>
+                  <p class="lesson-subtitle">Health & Physical Education</p>
+                </div>
+                <span class="difficulty intermediate">Stage 6</span>
+              </div>
+              <div class="lesson-content">
+                <p class="lesson-description">Personal Development, Health and Physical Education develops students' knowledge and skills to enhance health, safety, wellbeing, and participation in physical activity. Focuses on health of individuals and communities, movement skills, and critical thinking.</p>
+                <a href="https://educationstandards.nsw.edu.au/wps/portal/nesa/11-12/stage-6-learning-areas/pdhpe/pdhpe-syllabus" target="_blank" class="syllabus-link">📋 View NESA Syllabus</a>
+              </div>
+              <div class="lesson-stats">
+                <div class="stat-item">
+                  <span class="stat-icon">📖</span>
+                  <span class="stat-text">4 Core Topics</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-icon">⏱️</span>
+                  <span class="stat-text">2 Years</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-icon">👥</span>
+                  <span class="stat-text">900 students</span>
+                </div>
+              </div>
+              <div class="lesson-progress">
+                <div class="progress-info">
+                  <span class="progress-label">Your Progress</span>
+                  <span class="progress-percentage">0%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 0%"></div>
+                </div>
+                <span class="progress-status">Not Started</span>
+              </div>
+              <div class="lesson-actions">
+                <button class="btn-primary">🚀 Start Learning</button>
+                <button class="btn-secondary">📋 View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Enhanced Recommended Section -->
+          <div class="recommended-section">
+            <div class="section-header">
+            <h3>🌟 Recommended for You</h3>
+              <p>Based on your learning preferences and progress</p>
+            </div>
+            <div class="recommendation-grid">
+              <div class="recommendation-card">
+                <div class="recommendation-icon">📊</div>
+                <div class="recommendation-content">
+                  <h4>Data Analysis Basics</h4>
+                  <p>Perfect next step after completing Mathematics Standard 2</p>
+                <span class="recommendation-reason">Based on your progress</span>
+                </div>
+                <button class="btn-secondary">Explore</button>
+              </div>
+              <div class="recommendation-card">
+                <div class="recommendation-icon">🎨</div>
+                <div class="recommendation-content">
+                  <h4>Creative Writing Workshop</h4>
+                <p>Enhance your English skills with creative exercises</p>
+                <span class="recommendation-reason">Popular with students like you</span>
+                </div>
+                <button class="btn-secondary">Explore</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 RuralEdu- Empowering Rural Education</p>
+        <div class="footer-links">
+          <a href="#help">Help</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

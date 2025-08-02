@@ -1,0 +1,93 @@
+# Security Headers
+<IfModule mod_headers.c>
+    # Content Security Policy
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;"
+    
+    # Prevent clickjacking
+    Header always set X-Frame-Options "DENY"
+    
+    # Prevent MIME type sniffing
+    Header always set X-Content-Type-Options "nosniff"
+    
+    # Enable XSS protection
+    Header always set X-XSS-Protection "1; mode=block"
+    
+    # Referrer Policy
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    
+    # Permissions Policy
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+    
+    # Remove server information
+    Header unset Server
+    Header unset X-Powered-By
+</IfModule>
+
+# Protect sensitive files
+<Files "*.sql">
+    Order allow,deny
+    Deny from all
+</Files>
+
+<Files "*.log">
+    Order allow,deny
+    Deny from all
+</Files>
+
+<Files "config.php">
+    Order allow,deny
+    Deny from all
+</Files>
+
+<Files "security_headers.php">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Protect .htaccess itself
+<Files ".htaccess">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Disable directory browsing
+Options -Indexes
+
+# Prevent access to backup files
+<FilesMatch "\.(bak|backup|old|tmp|temp)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Block access to hidden files
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Force HTTPS (uncomment in production)
+# RewriteEngine On
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Prevent access to PHP files in uploads directory (if you have one)
+# <Directory "uploads">
+#     <Files "*.php">
+#         Order allow,deny
+#         Deny from all
+#     </Files>
+# </Directory>
+
+# Custom error pages
+ErrorDocument 403 /error.php?code=403
+ErrorDocument 404 /error.php?code=404
+ErrorDocument 500 /error.php?code=500
+
+# Limit file upload size (if needed)
+# php_value upload_max_filesize 10M
+# php_value post_max_size 10M
+
+# Disable PHP execution in uploads (if you have uploads)
+# <Directory "uploads">
+#     php_flag engine off
+# </Directory> 

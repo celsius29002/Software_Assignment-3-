@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile - RuralEdu</title>
+    <link rel="stylesheet" href="styles.css?v=2.3" />
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#5a67d8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="EduConnect" />
+    <meta name="application-name" content="EduConnect" />
+    <meta name="description" content="Offline-capable educational platform for rural students" />
+  </head>
+  <body>
+    <!-- Header Navigation -->
+    <header class="header">
+      <div class="container">
+        <div class="nav-brand">
+          <h1>📚 RuralEdu</h1>
+          <span class="tagline">Learning Without Limits</span>
+        </div>
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="index.html" class="nav-link">Dashboard</a></li>
+            <li><a href="lessons.html" class="nav-link">Lessons</a></li>
+            <li><a href="assignments.html" class="nav-link">Assignments</a></li>
+            <li><a href="progress.html" class="nav-link">Progress</a></li>
+            <li><a href="profile.html" class="nav-link active">Profile</a></li>
+          </ul>
+        </nav>
+        <div class="offline-indicator">
+          <span id="connection-status" class="online" style="cursor: pointer;">🟢 Online</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <section class="section active">
+        <div class="container">
+          <div class="page-header">
+            <h2>👤 Student Profile</h2>
+            <p>Manage your account information and preferences</p>
+          </div>
+
+          <div class="profile-content">
+            <div class="profile-info">
+              <div class="avatar-section">
+                <div class="avatar-circle">👨‍🎓</div>
+                <button class="btn-secondary">Change Avatar</button>
+              </div>
+              <div class="student-details">
+                <h3>Xavier Trieu</h3>
+                <p>Grade 12 Student</p>
+                <p>📍 Ryde Secondary College</p>
+                <p>📧 xavier.trieu@education.nsw.gov.au</p>
+                <p>📞 +1 234 567 8900</p>
+                <p>📅 Joined: June 2025 </p>
+                <button class="btn-primary">Edit Profile</button>
+              </div>
+            </div>
+            
+            <div class="profile-stats">
+              <div class="stat-box">
+                <h4>Learning Statistics</h4>
+                <div class="stat-grid">
+                  <div class="stat">
+                    <span class="number">0</span>
+                    <span class="label">Lessons Completed</span>
+                  </div>
+                  <div class="stat">
+                    <span class="number">0</span>
+                    <span class="label">Assignments Submitted</span>
+                  </div>
+                  <div class="stat">
+                    <span class="number">54</span>
+                    <span class="label">Days Active</span>
+                  </div>
+                  <div class="stat">
+                    <span class="number">0%</span>
+                    <span class="label">Average Score</span>
+                  </div>
+                  <div class="stat">
+                    <span class="number">0</span>
+                    <span class="label">Total Points</span>
+                  </div>
+                  <div class="stat">
+                    <span class="number">0</span>
+                    <span class="label">Achievements</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Academic Information -->
+          <div class="academic-info">
+            <h3>🎓 Academic Information</h3>
+            <div class="info-grid">
+              <div class="info-card">
+                <h4>Current Enrollment</h4>
+                <div class="info-details">
+                  <p><strong>Grade Level:</strong> 12th Grade</p>
+                  <p><strong>Academic Year:</strong> 2020-2025</p>
+                  <p><strong>School:</strong> Ryde Secondary College</p>
+                  <p><strong>Student ID:</strong> REC-2025-1045</p>
+                </div>
+              </div>
+              <div class="info-card">
+                <h4>Learning Goals</h4>
+                <div class="goal-list">
+                  <div class="goal-item">
+                    <span class="goal-subject">📖 English Standard</span>
+                    <span class="goal-target">Target: 90%</span>
+                    <span class="goal-current">Current: 85%</span>
+                  </div>
+                  <div class="goal-item">
+                    <span class="goal-subject">➗ Mathematics Standard 2</span>
+                    <span class="goal-target">Target: 85%</span>
+                    <span class="goal-current">Current: 78%</span>
+                  </div>
+                  <div class="goal-item">
+                    <span class="goal-subject">🔧 Design and Technology</span>
+                    <span class="goal-target">Target: 95%</span>
+                    <span class="goal-current">Current: 93%</span>
+                  </div>
+                  <div class="goal-item">
+                    <span class="goal-subject">💻 Software Engineering</span>
+                    <span class="goal-target">Target: 88%</span>
+                    <span class="goal-current">Current: 82%</span>
+                  </div>
+                  <div class="goal-item">
+                    <span class="goal-subject">🏃 PDHPE</span>
+                    <span class="goal-target">Target: 85%</span>
+                    <span class="goal-current">Current: 80%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="profile-settings">
+            <h3>⚙️ Preferences & Settings</h3>
+            <div class="settings-sections">
+              <div class="settings-section">
+                <h4>🔔 Notifications</h4>
+                <div class="settings-grid">
+                  <div class="setting-item">
+                    <label for="email-notifications">📧 Email Notifications</label>
+                    <input type="checkbox" id="email-notifications" checked>
+                  </div>
+                  <div class="setting-item">
+                    <label for="assignment-reminders">📝 Assignment Reminders</label>
+                    <input type="checkbox" id="assignment-reminders" checked>
+                  </div>
+                  <div class="setting-item">
+                    <label for="progress-updates">📊 Weekly Progress Updates</label>
+                    <input type="checkbox" id="progress-updates" checked>
+                  </div>
+                  <div class="setting-item">
+                    <label for="achievement-alerts">🏆 Achievement Alerts</label>
+                    <input type="checkbox" id="achievement-alerts" checked>
+                  </div>
+                </div>
+              </div>
+
+              <div class="settings-section">
+                <h4>📱 App Preferences</h4>
+                <div class="settings-grid">
+                  <div class="setting-item">
+                    <label for="offline-mode">📱 Offline Mode</label>
+                    <input type="checkbox" id="offline-mode" checked>
+                  </div>
+                  <div class="setting-item">
+                    <label for="dark-mode">🌙 Dark Mode</label>
+                    <input type="checkbox" id="dark-mode">
+                  </div>
+                  <div class="setting-item">
+                    <label for="auto-save">💾 Auto-save Drafts</label>
+                    <input type="checkbox" id="auto-save" checked>
+                  </div>
+                  <div class="setting-item">
+                    <label for="high-contrast">🔍 High Contrast Mode</label>
+                    <input type="checkbox" id="high-contrast">
+                  </div>
+                </div>
+              </div>
+
+              <div class="settings-section">
+                <h4>🌐 Language & Region</h4>
+                <div class="settings-grid">
+                  <div class="setting-item">
+                    <label for="language">Language</label>
+                    <select id="language">
+                      <option value="en">English</option>
+                      <option value="es">Spanish</option>
+                      <option value="fr">French</option>
+                      <option value="hi">Hindi</option>
+                    </select>
+                  </div>
+                  <div class="setting-item">
+                    <label for="timezone">Time Zone</label>
+                    <select id="timezone">
+                      <option value="UTC-5">Eastern Time (UTC-5)</option>
+                      <option value="UTC-6">Central Time (UTC-6)</option>
+                      <option value="UTC-7">Mountain Time (UTC-7)</option>
+                      <option value="UTC-8">Pacific Time (UTC-8)</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recent Achievements -->
+          <div class="recent-achievements">
+            <h3>🏆 Recent Achievements</h3>
+            <div class="achievement-showcase">
+              <div class="achievement-badge earned">
+                <div class="badge-icon">🎯</div>
+                <h4>Perfect Score</h4>
+                <p>Scored 100% on Mathematics Test</p>
+                <span class="earned-date">Earned 100 days ago</span>
+              </div>
+              <div class="achievement-badge earned">
+                <div class="badge-icon">📚</div>
+                <h4>Lesson Streak</h4>
+                <p>Completed lessons for 10 days straight</p>
+                <span class="earned-date">Earned 100 days ago</span>
+              </div>
+              <div class="achievement-badge earned">
+                <div class="badge-icon">⭐</div>
+                <h4>Honor Student</h4>
+                <p>Maintained A grade average</p>
+                <span class="earned-date">Earned 2 weeks ago</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Account Actions -->
+          <div class="account-actions">
+            <h3>🔐 Account Management</h3>
+            <div class="action-buttons">
+              <button class="btn-secondary">Change Password</button>
+              <button class="btn-secondary">Download Data</button>
+              <button class="btn-secondary">Privacy Settings</button>
+              <button class="btn-secondary">Help & Support</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 RuralEdu- Empowering Rural Education</p>
+        <div class="footer-links">
+          <a href="#help">Help</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

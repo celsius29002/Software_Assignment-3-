@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignments - RuralEdu</title>
+    <link rel="stylesheet" href="styles.css?v=2.3" />
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#5a67d8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="EduConnect" />
+    <meta name="application-name" content="EduConnect" />
+    <meta name="description" content="Offline-capable educational platform for rural students" />
+  </head>
+  <body>
+    <!-- Header Navigation -->
+    <header class="header">
+      <div class="container">
+        <div class="nav-brand">
+          <h1>📚 RuralEdu</h1>
+          <span class="tagline">Learning Without Limits</span>
+        </div>
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="index.html" class="nav-link">Dashboard</a></li>
+            <li><a href="lessons.html" class="nav-link">Lessons</a></li>
+            <li><a href="assignments.html" class="nav-link active">Assignments</a></li>
+            <li><a href="progress.html" class="nav-link">Progress</a></li>
+            <li><a href="profile.html" class="nav-link">Profile</a></li>
+          </ul>
+        </nav>
+        <div class="offline-indicator">
+          <span id="connection-status" class="online" style="cursor: pointer;">🟢 Online</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <section class="section active">
+        <div class="container">
+          <div class="page-header">
+            <h2>📝 Your Assignments</h2>
+            <p>Stay on top of your coursework and deadlines</p>
+          </div>
+
+          <div class="assignments-tabs">
+            <button class="tab-btn active" data-tab="pending">Pending (5)</button>
+            <button class="tab-btn" data-tab="completed">Completed (8)</button>
+            <button class="tab-btn" data-tab="overdue">Overdue (1)</button>
+            <button class="tab-btn" data-tab="upcoming">Upcoming (2)</button>
+          </div>
+          
+          <!-- Pending Examinations -->
+          <div id="pending" class="tab-content active">
+            <div class="assignment-card">
+              <div class="assignment-header">
+                <h3>English Standard: Trial Examination</h3>
+                <span class="priority high">High Priority</span>
+              </div>
+              <p>Sit the English Standard Trial HSC Examination. The exam will assess your skills in comprehension, analysis, and essay writing based on the prescribed modules and texts.</p>
+              <div class="assignment-meta">
+                <span>📅 Exam Date: 4th August (2h 40m), 5th August (2h)</span>
+                <span>📊 Marks: 100 marks</span>
+                <span>📖 Subject: English Standard</span>
+              </div>
+              <div class="assignment-progress">
+                <div class="progress-info">
+                  <span>Status: Not Started</span>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 0%"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="assignment-actions">
+                <button class="btn-primary">View Exam Details</button>
+                <button class="btn-secondary">Revision Tips</button>
+              </div>
+            </div>
+            <div class="assignment-card">
+              <div class="assignment-header">
+                <h3>Mathematics Standard 2: Trial Examination</h3>
+                <span class="priority high">High Priority</span>
+              </div>
+              <p>Sit the Mathematics Standard 2 Trial HSC Examination. The exam will cover algebra, measurement, financial mathematics, statistics, and networks.</p>
+              <div class="assignment-meta">
+                <span>📅 Exam Date: 11th August</span>
+                <span>📊 Marks: 100 marks</span>
+                <span>📖 Subject: Mathematics Standard 2</span>
+              </div>
+              <div class="assignment-progress">
+                <div class="progress-info">
+                  <span>Status: Not Started</span>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 0%"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="assignment-actions">
+                <button class="btn-primary">View Exam Details</button>
+                <button class="btn-secondary">Formula Sheet</button>
+              </div>
+            </div>
+            <div class="assignment-card">
+              <div class="assignment-header">
+                <h3>PDHPE: Trial Examination</h3>
+                <span class="priority high">High Priority</span>
+              </div>
+              <p>Sit the PDHPE Trial HSC Examination. The exam will assess your understanding of health priorities, movement skills, and critical thinking in health and physical education.</p>
+              <div class="assignment-meta">
+                <span>📅 Exam Date: 8th August</span>
+                <span>📊 Marks: 100 marks</span>
+                <span>📖 Subject: PDHPE</span>
+              </div>
+              <div class="assignment-progress">
+                <div class="progress-info">
+                  <span>Status: Not Started</span>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 0%"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="assignment-actions">
+                <button class="btn-primary">View Exam Details</button>
+                <button class="btn-secondary">Practice Questions</button>
+              </div>
+            </div>
+            <div class="assignment-card">
+              <div class="assignment-header">
+                <h3>Design and Technology: Major Project</h3>
+                <span class="priority high">High Priority</span>
+              </div>
+              <p>Submit your Major Design Project folio documenting research, ideation, development, and evaluation. This is a substantial project demonstrating your design thinking and technical skills.</p>
+              <div class="assignment-meta">
+                <span>📅 Due Date: 28th August</span>
+                <span>📊 Marks: 60 marks</span>
+                <span>📖 Subject: Design and Technology</span>
+              </div>
+              <div class="assignment-progress">
+                <div class="progress-info">
+                  <span>Status: In Progress</span>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 65%"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="assignment-actions">
+                <button class="btn-primary">Continue Project</button>
+                <button class="btn-secondary">View Requirements</button>
+              </div>
+            </div>
+            <div class="assignment-card">
+              <div class="assignment-header">
+                <h3>Software Engineering: Major Project</h3>
+                <span class="priority high">High Priority</span>
+              </div>
+              <p>Develop a substantial software engineering project to demonstrate your mastery and application of subject knowledge and skills in relation to course outcomes over an extended period of time.</p>
+              <div class="assignment-meta">
+                <span>📅 Due Date: 1st August</span>
+                <span>📊 Marks: 100 marks</span>
+                <span>📖 Subject: Software Engineering</span>
+              </div>
+              <div class="assignment-progress">
+                <div class="progress-info">
+                  <span>Status: In Progress</span>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 45%"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="assignment-actions">
+                <button class="btn-primary">Continue Development</button>
+                <button class="btn-secondary">Project Guidelines</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Completed Examinations -->
+          <div id="completed" class="tab-content">
+            <div class="assignment-card completed">
+              <div class="assignment-header">
+                <h3>English Standard: Trial Examination</h3>
+                <span class="grade excellent">Result: 85%</span>
+              </div>
+              <p>Completed the English Standard Trial HSC Examination. Demonstrated strong comprehension, analysis, and essay writing skills.</p>
+              <div class="assignment-meta">
+                <span>📅 Completed: 3 days ago</span>
+                <span>📊 Marks: 100 marks</span>
+                <span>📖 Subject: English Standard</span>
+              </div>
+              <div class="assignment-actions">
+                <button class="btn-secondary">View Feedback</button>
+                <button class="btn-secondary">Review Paper</button>
+              </div>
+            </div>
+            <div class="assignment-card completed">
+              <div class="assignment-header">
+                <h3>Mathematics Standard 2: Trial Examination</h3>
+                <span class="grade good">Result: 78%</span>
+              </div>
+              <p>Completed the Mathematics Standard 2 Trial HSC Examination. Covered all key topics and demonstrated problem-solving skills.</p>
+              <div class="assignment-meta">
+                <span>📅 Completed: 1 week ago</span>
+                <span>📊 Marks: 100 marks</span>
+                <span>📖 Subject: Mathematics Standard 2</span>
+              </div>
+              <div class="assignment-actions">
+                <button class="btn-secondary">View Feedback</button>
+                <button class="btn-secondary">Review Paper</button>
+              </div>
+            </div>
+            <div class="assignment-card completed">
+              <div class="assignment-header">
+                <h3>PDHPE: Trial Examination</h3>
+                <span class="grade good">Result: 80%</span>
+              </div>
+              <p>Completed the PDHPE Trial HSC Examination. Demonstrated understanding of health priorities and movement skills.</p>
+              <div class="assignment-meta">
+                <span>📅 Completed: 2 weeks ago</span>
+                <span>📊 Marks: 100 marks</span>
+                <span>📖 Subject: PDHPE</span>
+              </div>
+              <div class="assignment-actions">
+                <button class="btn-secondary">View Feedback</button>
+                <button class="btn-secondary">Review Paper</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Overdue Examinations -->
+          <div id="overdue" class="tab-content">
+            <div class="assignment-card overdue">
+              <div class="assignment-header">
+                <h3>English Standard: Trial Examination</h3>
+                <span class="priority urgent">Overdue</span>
+              </div>
+                              <p>English Standard Trial HSC Examination was scheduled. Please contact your teacher for a resit or extension.</p>
+              <div class="assignment-meta">
+                  <span>📅 Was scheduled: 4th August (2h 40m), 5th August (2h)</span>
+                  <span>📊 Marks: 100 marks</span>
+                  <span>📖 Subject: English Standard</span>
+              </div>
+              <div class="late-notice">
+                <span>⚠️ Contact your teacher for rescheduling options.</span>
+              </div>
+              <div class="assignment-actions">
+                <button class="btn-primary">Request Resit</button>
+                <button class="btn-secondary">Request Extension</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Upcoming Examinations -->
+          <div id="upcoming" class="tab-content">
+            <div class="assignment-card upcoming">
+              <div class="assignment-header">
+                <h3>Mathematics Standard 2: Trial Examination</h3>
+                <span class="priority medium">Releases Soon</span>
+              </div>
+              <p>Prepare for the Mathematics Standard 2 Trial HSC Examination. Review all key topics and practice past papers.</p>
+              <div class="assignment-meta">
+                <span>📅 Exam Date: 11th August</span>
+                <span>📊 Marks: 100 marks</span>
+                <span>📖 Subject: Mathematics Standard 2</span>
+              </div>
+              <div class="assignment-actions">
+                <button class="btn-secondary">Set Reminder</button>
+                <button class="btn-secondary">Practice Papers</button>
+              </div>
+            </div>
+            <div class="assignment-card upcoming">
+              <div class="assignment-header">
+                <h3>PDHPE: Trial Examination</h3>
+                <span class="priority low">Coming Next Week</span>
+              </div>
+              <p>Prepare for the PDHPE Trial HSC Examination. Revise health priorities, movement skills, and practice extended responses.</p>
+              <div class="assignment-meta">
+                <span>📅 Exam Date: 8th August</span>
+                <span>📊 Marks: 100 marks</span>
+                <span>📖 Subject: PDHPE</span>
+              </div>
+              <div class="assignment-actions">
+                <button class="btn-secondary">Set Reminder</button>
+                <button class="btn-secondary">Practice Papers</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 RuralEdu Empowering Rural Education</p>
+        <div class="footer-links">
+          <a href="#help">Help</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
