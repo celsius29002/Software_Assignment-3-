@@ -1,4 +1,4 @@
-# 📚 EduConnect - Educational Platform for Rural Students
+# 📚 RuralEdu - Educational Platform for Rural Students
 
 A modern, responsive educational website designed specifically for rural students, focusing on NESA (NSW Education Standards Authority) subjects. Built with HTML5, CSS3, JavaScript, and PHP with MySQL backend.
 
@@ -277,5 +277,6 @@ For support or questions:
 - Integration with learning management systems
 
 ---
+
 
 **Built with ❤️ for rural education** 
